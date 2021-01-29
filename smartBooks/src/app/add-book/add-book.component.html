@@ -1,0 +1,45 @@
+<div class="container mt-3" id="main">
+    <h1>Yeni Kitap Ekle</h1>
+    <p>Ekleyeceğiniz Kitabın Bilgilerini Giriniz</p>
+    
+    <form>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text"  >Book Name</span>
+        </div>
+        <input type="text" [(ngModel)]="book.bookName" name="bookName" class="form-control">
+      </div>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text">Category</span>
+        </div>
+        <input type="text" [(ngModel)]="book.bookCategory" name="bookCategory" class="form-control">
+      </div>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text">Stock</span>
+        </div>
+        <input type="text" [(ngModel)]="book.bookStock" name="bookStock" class="form-control">
+      </div>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text">Author</span>
+        </div>
+        <input type="text"  [(ngModel)]="book.bookAuthor" name="bookAuthor" class="form-control"  >
+      </div>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text">Barcode</span>
+        </div>
+        <input type="text"  [(ngModel)]="book.bookBarcode" name="bookBarcode" class="form-control">
+      </div>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text">Publisher House</span>
+        </div>
+        <input type="text"  [(ngModel)]="book.bookPublisherHouse"  name="bookPublisherHouse" class="form-control">
+      </div>
+    </form>
+    <button type="button" (click)="addBook(book)" class="btn btn-success">Kayıt</button>
+    
+  </div>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2>Kitaplar</h2>
+  <input class="form-control" id="productName" placeholder="Ürün Ara" [(ngModel)]="filterText" />
+
+        <small *ngIf="filterText">
+
+            Şu anda <strong>{{filterText}}</strong> aradınız
+
+        </small>
+
+  <table class="table" >
+    <thead class="thead-dark">
+      <tr >
+        <th>Book Name</th>
+        <th>Category </th>
+        <th>Stock</th>
+        <th>Author</th>
+        <th>Barcode</th>
+        <th>Publisher House</th>
+        <th>Member Name</th>
+        <th>Member E-Mail</th>
+        <th>Member TcNo</th>
+        <th>Member Phone</th>
+        <th>Date</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr id="myList" *ngFor="let ranga of rentBookList | rentbookfilter:filterText">
+        <td>{{ranga.bookName}}</td>
+        <td>{{ranga.bookCategory}}</td>
+        <td>{{ranga.bookStock}}</td>
+        <td>{{ranga.bookAuthor}}</td>
+        <td>{{ranga.bookBarcode}}</td>
+        <td>{{ranga.bookPublisherHouse}}</td>
+        <td>{{ranga.member.memberName}}</td>
+        <td>{{ranga.member.memberEmail}}</td>
+        <td>{{ranga.member.memberPhone}}</td>
+        <td>{{ranga.member.memberTcNo}}</td>
+        <td>{{ranga.date}}</td>
+        <td>
+            
+
+            <button type="button" (click)="bookDelete(ranga)"  class="btn btn-outline-danger">Sil</button>
+
+            
+          </td>
+          
+      </tr>
+      
+    </tbody>
+  </table>  
+
+

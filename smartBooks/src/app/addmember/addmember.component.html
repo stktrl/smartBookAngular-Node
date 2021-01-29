@@ -1,0 +1,34 @@
+<div class="container mt-3" id="main">
+    <h1>Üye EKle</h1>
+    <p>Ekleyeceğiniz Üye Bilgilerini Giriniz</p>
+    
+    <form>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text"  >Üye Adı</span>
+        </div>
+        <input type="text" [(ngModel)]="member.memberName" name="memberName" class="form-control">
+      </div>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text">Üye Mail</span>
+        </div>
+        <input type="text" [(ngModel)]="member.memberEmail" name="memberMail" class="form-control">
+      </div>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text">Üye Telefon</span>
+        </div>
+        <input type="text" [(ngModel)]="member.memberPhone" name="memberPhone" class="form-control">
+      </div>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text">Üye Kimlik Numarası</span>
+        </div>
+        <input type="text"  [(ngModel)]="member.memberTcNo" name="memberTcNo" class="form-control"  >
+      </div>
+      
+    </form>
+    <button type="button" (click)="addMember(member)" class="btn btn-success">Kayıt</button>
+    
+  </div>
