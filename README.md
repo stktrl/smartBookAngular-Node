@@ -1,0 +1,1 @@
+Mean Stack(MongoDB, Express, Angular.js, Node.js.)  Projesidir. Sisteme kayıt olunup, kullanıcı adı ve şifreyle giriş yapılmaktadır. Oturum bilgisi Jwt ile tutulmaktadır. Sistem üzerinde CRUD işlemleri yapılmaktadır. Kullanıcı sistem üzerinden üyelerin ve kitapların yönetimini sağlar.
