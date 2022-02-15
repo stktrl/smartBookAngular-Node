@@ -12,7 +12,7 @@ app.use('/api',api)
 
 app.get('/',function(req,res){
 
-    res.send('hello yarram')
+    res.send('hi from server')
 
 })
 
